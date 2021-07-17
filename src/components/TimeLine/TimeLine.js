@@ -7,8 +7,8 @@ import { TimeLineData } from '../../constants/constants';
 const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
 
 const Timeline = () => {
-const [activeItem, setActiveItem] = useState(0);
-const carouselRef = useRef();
+  const [activeItem, setActiveItem] = useState(0);
+  const carouselRef = useRef();
 
   const scroll = (node, left) => {
     return node.scrollTo({ left, behavior: 'smooth' });
@@ -24,41 +24,43 @@ const carouselRef = useRef();
     }
   }
 
-  // const handleScroll = () => {
-  //   if (carouselRef.current) {
-  //     const index = Math.round((carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.7)) * TimeLineData.length);
+  const handleScroll = () => {
+    if (carouselRef.current) {
+      const index = Math.round((carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.7)) * TimeLineData.length);
 
-  //     setActiveItem(index);
-  //   }
-  // }
+      setActiveItem(index);
+    }
+  }
 
-  // // snap back to beginning of scroll when window is resized
-  // // avoids a bug where content is covered up if coming from smaller screen
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     scroll(carouselRef.current, 0);
-  //   }
+  // snap back to beginning of scroll when window is resized
+  // avoids a bug where content is covered up if coming from smaller screen
+  useEffect(() => {
+    const handleResize = () => {
+      scroll(carouselRef.current, 0);
+    }
 
-  //   window.addEventListener('resize', handleResize);
-  // }, []);
+    window.addEventListener('resize', handleResize);
+  }, []);
 
   return (
     <Section id="about">
       <SectionTitle>About Me</SectionTitle>
-      <SectionText>Hi I'm Zain, lets be friends (heart)</SectionText>
-      <CarouselContainer ref={carouselRef}>
+      <SectionText>
+        The purpose of JavaScript Mastery is to help aspiring and established developers to take their development skills to the next level and build awesome apps.
+      </SectionText>
+      <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>
           {TimeLineData.map((item, index) => (
-            <CarouselMobileScrollNode key={index} final={TOTAL_CAROUSEL_COUNT - 1}>
-                <CarouselItem
+            <CarouselMobileScrollNode key={index} final={index === TOTAL_CAROUSEL_COUNT - 1}>
+              <CarouselItem
                 index={index}
-                id={'carousel_item-${index}'}
+                id={`carousel__item-${index}`}
                 active={activeItem}
                 onClick={(e) => handleClick(e, index)}
-                >
-                <CarouselItemTitle>
-                  {item.year}
-                  <CarouselItemImg
+              >
+              <CarouselItemTitle>
+                {item.year}
+                <CarouselItemImg
                     width="208"
                     height="6"
                     viewBox="0 0 208 6"
@@ -88,26 +90,27 @@ const carouselRef = useRef();
                       </linearGradient>
                     </defs>
                   </CarouselItemImg>
-                </CarouselItemTitle>
-                <CarouselItemText>{item.text}</CarouselItemText>
-                </CarouselItem>
+              </CarouselItemTitle>
+              <CarouselItemText>{item.text}</CarouselItemText>
+              </CarouselItem>
             </CarouselMobileScrollNode>
           ))}
         </>
       </CarouselContainer>
       <CarouselButtons>
-        {TimeLineData.map((item,index) => (
-          <CarouselButton
+        {TimeLineData.map((item, index) => (
+          <CarouselButton 
             key={index}
             index={index}
             active={activeItem}
-            onClick={(e) => handleClick(e,index)}
+            onClick={(e) => handleClick(e, index)}
             type="button"
           >
-            <CarouselButtonDot active={activeItem}/>
+            <CarouselButtonDot active={activeItem} />
           </CarouselButton>
         ))}
       </CarouselButtons>
+      <SectionDivider />
     </Section>
   );
 };
