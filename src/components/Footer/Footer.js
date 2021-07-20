@@ -1,20 +1,22 @@
 import React from 'react';
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
-
+import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { SocialIcons } from '../Header/HeaderStyles';
 import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, SocialContainer, SocialIconsContainer } from './FooterStyles';
 
 const Footer = () => {
   return (
+    
     <FooterWrapper>
       <LinkList>
+        <SectionTitle >Contact Me</SectionTitle>
         <LinkColumn>
-          <LinkTitle>Call</LinkTitle>
-          <LinkItem href="tel:111-111-1111">111-111-1111</LinkItem>
+          <LinkTitle>Phone Number</LinkTitle>
+          <LinkItem href="tel:954-559-3073">954 - 559 - 3073</LinkItem>
         </LinkColumn>
         <LinkColumn>
           <LinkTitle>Email</LinkTitle>
-          <LinkItem href="tel:111-111-1111">gmail.com</LinkItem>
+          <LinkItem href="mukatizain@gmail.com">mukatizain@gmail.com</LinkItem>
         </LinkColumn>
       </LinkList>
       <SocialIconsContainer>
@@ -22,10 +24,10 @@ const Footer = () => {
           <Slogan>Innovating and stuff</Slogan>
         </CompanyContainer>
         <SocialContainer>
-        <SocialIcons href="http://github.com">
+        <SocialIcons href="http://github.com/epiczain1234/">
         <AiFillGithub size="3rem"/>
         </SocialIcons>
-      <SocialIcons href="http://linkedin.com">
+      <SocialIcons href="https://www.linkedin.com/in/zain-mukati-167597187/">
         <AiFillLinkedin size="3rem"/>
       </SocialIcons>
       <SocialIcons href="http://instagram.com">
