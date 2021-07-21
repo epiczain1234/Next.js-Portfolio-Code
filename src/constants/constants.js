@@ -28,7 +28,7 @@ export const projects = [
   },
   {
     title: 'Zain\'s Expense Tracker',
-    description:"An custom expense tracker I built for my own specific needs. Leverages a SQL backend to store expense Data.",
+    description:"A custom expense tracker I built for my own specific needs. Leverages a SQL backend to store expense Data.",
     image: '/images/expense.jpg',
     tags: ['React.js', 'MySQL', 'Express', 'Joi'],
     source: 'https://github.com/epiczain1234/Expense_Tracker_React',
