@@ -38,6 +38,17 @@ export const TitleContent = styled.div`
 
 `;
 
+export const TitleProject = styled.div`
+  text-align: center;
+  z-index: 20;
+  width: 100%;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #9cc9e3;
+  padding: .5rem 0;
+
+`;
+
 
 export const HeaderThree = styled.h3`
   font-weight: 500;

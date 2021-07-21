@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
+import { TitleProject, BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
+
 // the mapping below automatically arranges the projects pleasingly
 const Projects = () => (
   <Section nopadding id="projects">
@@ -18,7 +19,7 @@ const Projects = () => (
           </TitleContent>
           <CardInfo>{description}</CardInfo>
           <div>
-            <TitleContent>Stack</TitleContent>
+            <TitleProject>Technologies Used:</TitleProject>
             <TagList>
               {tags.map((tag, i) => (
                 <Tag key={i}>{tag}</Tag>
@@ -26,8 +27,8 @@ const Projects = () => (
             </TagList>
           </div>
           <UtilityList>
-            <ExternalLinks href={visit}>Code</ExternalLinks>
-            <ExternalLinks href={visit}>Source</ExternalLinks>
+            <ExternalLinks href={visit}>Source Code</ExternalLinks>
+            <ExternalLinks href={source}>Project Link</ExternalLinks>
           </UtilityList>
         </BlogCard>
       ))}
