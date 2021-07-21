@@ -9,6 +9,24 @@ export const projects = [
     id: 0,
   },
   {
+    title: 'Co-Occurence Text Prediction Algorithm',
+    description: "A text prediction algorithm that when given a certain word, will tell you what other words co-occur with it. Similar to auto-predict on most phones.",
+    image: '/images/Textpredict.jpeg',
+    tags: ['C'],
+    source: 'https://github.com/epiczain1234/Text-Predictor',
+    visit: 'https://github.com/epiczain1234/Text-Predictor',
+    id: 2,
+  },
+  {
+    title: 'High-Pri Notes',
+    description: "A note taking app I created using Flask on the frontend and SQLlite for the backend.",
+    image: '/images/notesui.png',
+    tags: ['Python', 'Flask','SQLite', 'Jinja2'],
+    source: 'https://github.com/epiczain1234/CRUD-Notes-App.git',
+    visit: 'https://github.com/epiczain1234/CRUD-Notes-App.git',
+    id: 3,
+  },
+  {
     title: 'Zain\'s Expense Tracker',
     description:"An custom expense tracker I built for my own specific needs. Leverages a SQL backend to store expense Data.",
     image: '/images/expense.jpg',
@@ -17,24 +35,7 @@ export const projects = [
     visit: 'https://github.com/epiczain1234/Expense_Tracker_React',
     id: 1,
   },
-  {
-    title: 'Co-Occurence Text Prediction Algorithm',
-    description: "A text prediction algorithm that when given a certain word, will tell you what other words co-occur with it. Similar to auto-predict on most phones.",
-    image: '/images/Textpredict.jpg',
-    tags: ['C'],
-    source: 'https://github.com/epiczain1234/Text-Predictor',
-    visit: 'https://github.com/epiczain1234/Text-Predictor',
-    id: 3,
-  },
-  {
-    title: 'High-Pri Notes',
-    description: "A note taking app I created using Flask on the frontend and SQLlite for the backend.",
-      image: '/images/notesui.png',
-      tags: ['Python', 'Flask','SQLite', 'Jinja2'],
-    source: 'https://github.com/epiczain1234/CRUD-Notes-App.git',
-    visit: 'https://github.com/epiczain1234/CRUD-Notes-App.git',
-    id: 2,
-  },
+
 ];
 
 export const TimeLineData = [
