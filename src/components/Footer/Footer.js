@@ -1,6 +1,6 @@
 import React from 'react';
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
-import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
+import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import { SocialIcons } from '../Header/HeaderStyles';
 import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, SocialContainer, SocialIconsContainer } from './FooterStyles';
 
@@ -9,7 +9,7 @@ const Footer = () => {
     
     <FooterWrapper>
       <LinkList>
-        <SectionTitle >Contact Me</SectionTitle>
+        <LinkItem color= 'white'>Contact Me</LinkItem>
         <LinkColumn>
           <LinkTitle>Phone Number</LinkTitle>
           <LinkItem href="tel:954-559-3073">954 - 559 - 3073</LinkItem>
@@ -21,7 +21,6 @@ const Footer = () => {
       </LinkList>
       <SocialIconsContainer>
         <CompanyContainer>
-          <Slogan>Innovating and stuff</Slogan>
         </CompanyContainer>
         <SocialContainer>
         <SocialIcons href="http://github.com/epiczain1234/">

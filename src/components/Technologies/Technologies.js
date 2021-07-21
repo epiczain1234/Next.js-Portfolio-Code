@@ -1,5 +1,6 @@
 import React from 'react';
 import { DiFirebase, DiReact, DiZend } from 'react-icons/di';
+import { GoBeaker } from "react-icons/go";
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles';
 
@@ -17,8 +18,7 @@ const Technologies = () =>  (
         <ListContainer>
           <ListTitle>Front-End</ListTitle>  
           <ListParagraph>
-            Experience with <br/>
-            React.js
+            React.js, React Native, and Flutter
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -27,18 +27,16 @@ const Technologies = () =>  (
         <ListContainer>
           <ListTitle>Back-End</ListTitle>  
           <ListParagraph>
-            Experience with <br/>
-            Node.js and MySQL
+            Node.js, Express.js, AWS and MySQL
           </ListParagraph>
         </ListContainer>
       </ListItem>
       <ListItem>
         <DiZend size="3rem"/>
         <ListContainer>
-          <ListTitle>UI/UX</ListTitle>  
+          <ListTitle>General Purpose</ListTitle>  
           <ListParagraph>
-            Experience with <br/>
-            Figma
+          C, Java, Python, JavaScript, Docker, Unity, C#, ARCore, ARFoundation, Dart, Github, GitLab
           </ListParagraph>
         </ListContainer>
       </ListItem>

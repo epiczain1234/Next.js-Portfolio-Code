@@ -14,7 +14,7 @@ const Hero = (props) => (
         A senior in Computer Science attending <br/>
         The University of Central Florida
       </SectionText>
-      <Button onClick={() =>window.location = 'http://google.com'}>Resume </Button>
+      <Button onClick={() =>window.location = 'http://github.com/epiczain1234/'}>See More </Button>
     </LeftSection>
   </Section>
 );
