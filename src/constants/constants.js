@@ -11,7 +11,7 @@ export const projects = [
   {
     title: 'Co-Occurence Text Prediction Algorithm',
     description: "A text prediction algorithm that when given a certain word, will tell you what other words co-occur with it. Similar to auto-predict on most phones.",
-    image: '/images/Textpredict.jpeg',
+    image: '/images/text.jpeg',
     tags: ['C'],
     source: 'https://github.com/epiczain1234/Text-Predictor',
     visit: 'https://github.com/epiczain1234/Text-Predictor',
